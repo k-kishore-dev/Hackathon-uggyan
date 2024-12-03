@@ -1,0 +1,89 @@
+/* Basic Styling */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, #141e30, #243b55);
+    color: #fff;
+}
+
+/* Form Container */
+.form-container {
+    background: rgba(20, 30, 48, 0.85);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4), 0 0 40px rgba(255, 0, 255, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    font-size: 1.8rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    margin-bottom: 20px;
+}
+
+/* Labels and Inputs */
+label {
+    font-size: 1rem;
+    display: block;
+    margin: 10px 0 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #1b2936;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #2c2cef, #f19af3);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 30px #1414f3, 0 0 50px #b5c5f0;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff0080, #ff4500);
+    transform: translateY(-2px);
+}
+
+/* Result Message */
+#result {
+    font-size: 1rem;
+    margin-top: 15px;
+    font-weight: bold;
+}

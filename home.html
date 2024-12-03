@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Payment Details</h2>
+        <form id="payment-form">
+            <div class="input-group">
+                <label for="phone">Sender's Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter phone number" required>
+            </div>
+            <div class="input-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount" required>
+            </div>
+            <button class="submit-btn" type="submit">Submit</button>
+        </form>
+        <p id="result" style="margin-top: 15px;"></p>
+    </div>
+
+    <script>
+        // Handle form submission
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const phone = document.getElementById('phone').value;
+            const amount = document.getElementById('amount').value;
+            const result = document.getElementById('result');
+
+            if (phone && amount) {
+                result.innerHTML = `Payment of ${amount} successfully initiated from phone number ${phone}.`;
+                result.style.color = "green";
+            } else {
+                result.innerHTML = "Please fill in all fields.";
+                result.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>

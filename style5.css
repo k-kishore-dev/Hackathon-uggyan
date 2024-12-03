@@ -1,0 +1,125 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, #141e30, #243b55);
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Animated glowing background */
+body::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, #ff00ff, #00ffff, #ff4500, #1e90ff);
+    animation: glow-move 10s linear infinite;
+    transform: rotate(0deg);
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(150px);
+    opacity: 0.6;
+}
+
+@keyframes glow-move {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Form container styling */
+.form-container {
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    padding: 30px;
+    background: rgba(20, 30, 48, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4), 0 0 40px rgba(255, 0, 255, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #00ffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+/* Input fields */
+label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    background: #1b2936;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+/* Styled button with glowing effect */
+.thank-you-btn {
+    padding: 10px 24px; /* Increased padding for larger size */
+    background: linear-gradient(90deg, #2c2cef, #f19af3);
+    color: #fff;
+    border: none;
+    border-radius: 12px; /* Slightly more rounded for a modern look */
+    font-size: 1rem; /* Increased font size for better visibility */
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 30px #1414f3, 0 0 50px #b5c5f0;
+    animation: button-glow 2s infinite alternate;
+    transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.thank-you-btn:hover {
+    transform: translateY(-5px) scale(1.1); /* Adds a pop-out effect */
+    box-shadow: 0 0 40px #6016f4, 0 0 60px #306ee8;
+}
+
+/* Result message styles */
+#result {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+}

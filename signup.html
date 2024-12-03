@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up </title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>signup form</h2>
+        <form action="process_order.php" method="post">
+            <!-- merchant ID Field -->
+            <label for="merchant">merchant ID:</label>
+            <input type="text" id="Merchant" name="Merchant" placeholder="Enter your Merchant ID" required>
+            <label for="merchant-password">Merchant Password:</label>
+            <input type="password" id="merchant-password" name="merchant-password" placeholder="Enter your Merchant Password" required>
+          <!-- member ID Field --> 
+           <label for="Member">Member ID:</label>
+            <input type="text" id="Member" name="Member" placeholder="Enter your Merchant ID" required>
+            <label for="Member-password">Member Password:</label>
+            <input type="password" id="Member-password" name="Member-password" placeholder="Enter your Member Password" required>
+            <!-- Phone Number Field -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            
+            <!-- Address Field -->
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your address" rows="4" required></textarea>
+            
+            <!-- Buy Now Button -->
+            <button type="submit" class="buy-now-btn">Buy Now</button>
+        </form>
+    </div>
+</body>
+</html>
